@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "Atlas Documentation",
-    "description": "Esta é uma documentação sobre a Atlas API",
+    "title": "Atlas",
+    "description": "Essa é uma documetação sobre a Atlas API",
     "version": "1.0.0",
     "contact": {
       "email": "dani@rocketseat.com.br"
@@ -20,7 +20,8 @@
         "tags": [
           "users"
         ],
-        "summary": "Cria um novo usuário.",
+        "summary": "Cria um usuário.",
+        "description": "Cria um novo usuário.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -44,7 +45,7 @@
         },
         "responses": {
           "201": {
-            "description": "Operação realizada com sucesso.",
+            "description": "Usuário criado com sucesso.",
             "content": {
               "application/json": {
                 "schema": {
@@ -88,7 +89,9 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "error": "string"
+                    "error": {
+                      "type": "string"
+                    }
                   },
                   "example": {
                     "error": "User already exists."
@@ -175,7 +178,9 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "error": "string"
+                    "error": {
+                      "type": "string"
+                    }
                   },
                   "example": {
                     "error": "Only Admin's can access the list."
@@ -250,7 +255,9 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "error": "string"
+                    "error": {
+                      "type": "string"
+                    }
                   },
                   "example": {
                     "error": "User not found"
@@ -267,7 +274,7 @@
         "tags": [
           "users"
         ],
-        "summary": "Conceder permissão de Admin a um usuário.",
+        "summary": "Concede permissão de Admin a um usuário.",
         "parameters": [
           {
             "in": "path",
@@ -325,7 +332,9 @@
                 "schema": {
                   "type": "object",
                   "properties": {
-                    "error": "string"
+                    "error": {
+                      "type": "string"
+                    }
                   },
                   "example": {
                     "error": "User not found"
